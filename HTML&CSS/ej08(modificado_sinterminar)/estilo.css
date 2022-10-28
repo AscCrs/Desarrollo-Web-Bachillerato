@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+    box-sizing: border-box;
+}
+body{
+    background: #ecf0f1;
+    padding-top: 330px;
+    transition: padding-top 0.5s ease;
+}
+header{
+    width: 100%;
+    height: 300px;
+    background-image: url("Menu.jpg");
+    text-align: center;
+    position: fixed;
+    top: 0;
+    overflow: hidden;
+    transition: all 0.5s ease;
+}
+h3{
+    text-align: center;
+}
+#top{
+    display: block;
+    margin: auto;
+    width: 300px;
+    height: 300px;
+}
+#div1{
+    text-align: justify;
+}
+.mov{
+    float: left;
+    padding: 3px;
+}
+.mov:hover{
+    transform: scale(1.5);
+}
+.mov{
+    transition: transform 0.5s ease;
+}
+br{
+    clear: both;
+}
+p{
+    padding: 10px;
+}
+footer{
+    padding: 10px;
+}
+#title{
+    padding: 1px;
+    font: bold 20px Mifuente;
+    color: #585858;
+    text-align: center;
+}
+h1{
+    font: bold 15px Mifuente;
+    color: white;
+    line-height: 230px;
+    font-weight: 300;
+    transition: all 0.3s ease;
+}
+h1 i{
+    font-weight: bold;
+    text-transform: uppercase;
+}
+#blockQ{
+    text-align: left;
+    color: black;
+    font: bold 15px Arial;
+}
+header nav{
+    position: absolute;
+    bottom: 0;
+    height: 60px;
+    line-height: 60px;
+    width: 100%;
+    background: rgba(232,63,0,0.8);
+}
+header nav a{
+    color: white;
+    display: block;
+    padding: 10px 15px;
+    line-height: 1;
+    text-decoration: none;
+    border-radius: 5px;
+}
+header nav a:hover{
+    background: rgba(0,0,0,0.2);
+}
+@font-face{
+    font-family: 'Mifuente';
+    src: url('fuente/Pinewood.ttf');
+}

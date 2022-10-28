@@ -1,0 +1,101 @@
+body {
+    text-align: center;
+}
+#principal {
+    display: block;
+    width: 500px;
+    margin: 50px auto;
+    padding: 15px;
+    text-align: center;
+
+    border: 1px solid #999999;
+
+    /*Crea un borde con una imagen personalizada*/
+    -moz-border-image: url("design-resources-elements-2.png") 29 stretch;
+    -webkit-border-image: url("design-resources-elements-2.png") 29 stretch;
+    border-image: url("design-resources-elements-2.png") 29 stretch;
+    background: #dddddd;
+
+    /*
+    ESCALA EL OBJETO:
+    -moz-transform: scale(1, -1);
+    -webkit-transform: scale(1, -1);
+    
+    ROTA EL OBJETO:
+    -moz-transform: rotate(-30deg);
+    -webkit-transform: rotate(-30deg);
+
+    INCLINA EL OBJETO:
+    -moz-transform: skew(20deg);
+    -webkit-transform: skew(20deg);
+
+    TRASLADA EL OBJETO:
+    -moz-transform: translate(100px);
+    -webkit-transform: translate(100px);
+
+    HACE TODO A LA VEZ:
+    -moz-transform: translateY(100px) rotate(45deg) scaleX(0.3);
+    -webkit-transform: translateY(100px) rotate(45deg) scaleX(0.3);
+    */
+
+    /*
+    Puede ser aplicada entre dos estados de un elemento. Recibe 4 parametros: la propiedad
+    afectada, el tiempo que le tomara a la transición desde el comienzo hasta el final, una 
+    palabra clavr para especificar cómo la transición será realizada (ease, linear, ease-in, ease-out, ease-in-out)
+    y un valor de retardo que determina el tiempo que la transición tardara en comenzar.
+    */
+    -moz-transition: -moz-transform 1s ease-in-out 0.5s;
+    -webkit-transition: -webkit-transform 1s ease-in-out 0.5s;
+
+    /*Fue mejorada con la incorporación de offset y ambas generan un segundo borde alejado del elemento*/
+    outline: 2px dashed #000099;
+    outline-offset: 15px;
+
+    /*Genera esquinas redondeadas para la caja formada por el elemento*/
+    -moz-border-radius: 20px / 10px;
+    -webkit-border-radius: 20px / 10px;
+    border-radius: 20px / 10px;
+
+    /*Crea sombras para la caja formada por el elemento*/
+    -moz-box-shadow: rgb(150,150,150) 5px 5px;
+    -webkit-box-shadow: rgb(150,150,150) 5px 5px;
+    box-shadow: rgb(150,150,150) 5px 5px 10px inset;
+
+    /*
+    linear-gradient(posición inicio, color inicial, color final) Esta función
+    genera una gradiente líneal:
+
+    background: -webkit-linear-gradient(top, #FFFFFF, #006699);
+    background: -moz-linear-gradient(top, #FFFFFF, #006699); 
+    */
+    
+    /*radial gradient(posición inicio, forma, colo inicial, color final)
+      Esta función genera una gradiente radial
+    */
+    background: -webkit-radial-gradient(center, circle, #FFFFFF 0%, #006699 200%);
+    background: -moz-radial-gradient(center, circle, #FFFFFF 0%, #006699 200%);
+}
+/*Tranforma el objeto de forma dinamica:*/
+#principal:hover{
+    -moz-transform: rotate(5deg);
+    -webkit-transform: rotate(5deg);
+}
+#titulo{
+    font: bold 36px MiNuevaFuente, verdana,sans-serif;
+    /*Similar a box shadow, "text-shadow:;" crea una sombra alrededor del texto*/
+    /*
+    rgba tiene una mejor función que rgb y toma 4 valores: color rojo(0-255),
+    color verde(0-255), color azul(0-255) y la opacidad (un valor entre  y 1)
+    */
+    text-shadow: rgba(0,0,0,0.5) 3px 3px 6px;
+    /*
+    Función mejorada de hsl, Puede tomar cuatro valores: el tono (un valor entre 0 y 360),
+    la saturación (un porcentaje), la luminosidad (un porcentaje), y la opacidad (vlor entre 0 y 1)
+    */
+    color: hsla(120, 100%, 50%, 0.5);
+}
+/*Carga la fuente que se valla a ocupar, utlizando el: font-family: ' '; como declaración del nombre de la fuente*/
+@font-face {
+    font-family: 'MiNuevaFuente';
+    src: url('Pinewood.ttf');
+}

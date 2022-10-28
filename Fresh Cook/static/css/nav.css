@@ -1,0 +1,61 @@
+@media (min-width: 1024px) {
+    .articulo {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+.articulo:last-of-type {
+    margin-bottom: 0rem;
+}
+@media (min-width: 1024) {
+    .articulo.img {
+        flex-basis: 40%;
+    }
+    .articulo.cont {
+        flex-basis: calc(60% - 3rem);
+    }
+}
+.cont {
+    color: #000000;
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: 1rem;
+    margin-top: 10rem;
+}
+.cont span {
+    color: #E08709;
+}
+@media (max-width: 768px) {
+    div .img {
+        flex-basis: auto;
+    }
+    .cont {
+        margin-top: 1rem;
+        margin-left: 1rem;
+    }
+    img {
+        width: 100%;
+    }
+}
+/****** CABECERA DE CENAS ******/
+hr {
+  margin: 10px 0;
+}
+.cenas {
+  width: 100%;
+  height: 550px;
+  color: #000000;
+  background: url(img/header_cena-romantica-perfecta-tips-gourmet-portada.jpg) no-repeat center center/cover;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.cenas h2,
+.cenas p {
+  margin-bottom: 10px;
+}
+.cenas p { color: #000000;}

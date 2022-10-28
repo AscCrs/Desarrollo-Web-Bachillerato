@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fresh Cook</title>
+    <!-- Fuente -->
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;1,300&display=swap"rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="static/css/styles.css">
+    <!-- Font AWESOME -->
+
+    <meta name="keywords" content="cocinar, aprende, cena, desayuno">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <!--Normalize-->
+    <link rel="stylesheet" href="static/css/normalize.css">
+    <link rel="icon" type="icon" href="static/img/icono/favicon-16x16.png" sizes="16x16" />
+
+    <link rel="stylesheet" href="static/css/search_bar.css">
+
+</head>
+
+<body>
+    <div class="menu-btn">
+        <i class="fas fa-bars fa-2x"></i>
+    </div>
+    <!-- CONTENIDO-->
+    <div class="contenido">
+        <nav class="nav-main">
+            <img src="static/img/logo.png" alt="Logo P" class="nav-brand">
+            <ul class="nav-menu">
+                <li>
+                    <a class="mov" href="index.html"> Inicio</a>
+                </li>
+                <li>
+                    <a class="mov" href="templates/desayunos.html"> Desayunos</a>
+                </li>
+                <li>
+                    <a class="mov" href="templates/comidas.html"> Comidas</a>
+                </li>
+                <li>
+                    <a class="mov" href="templates/postres.html"> Postres</a>
+                </li>
+                <li>
+                    <a class="mov" href="templates/bebidas.html"> Bebidas</a>
+                </li>
+                <li>
+                    <a class="mov" href="templates/contacto.html"> Contacto</a>
+                </li>
+            </ul>
+
+            <div class="box" id = "srchbr">
+                <div class="container-1">
+                    <span class="icon"><i class="fa fa-search"></i></span>
+                    <input type="search" id="search" placeholder="Search...">
+                </div>
+            </div>
+            <!-- Barra de busqueda en proceso..
+                <form action="" class="search" method="GET">
+                <input type="text"input-search" name="busqueda" placeholder="Buscar">
+                <input type="submit" value="Buscar" class="btn_search">
+                </form>
+            -->
+
+        </nav>
+        <hr>
+        <!-- SHOWCASE -->
+        <header class="showcase">
+            <blockquote></blockquote>
+            <h1>Aprende a cocinar <span style="color: crimson;">desayunos y cenas!</span></h1>
+            <b>
+                <p>Bienvenido a Fresh Cook. Sabemos que a veces preparar algo rico en poco tiempo es dificil, 
+                    pero por eso estamos nosotros, dentro de nuestra página 
+                    podras encontrar diferentes recetas,
+                    para cada ocasión, ¿Vas a pasar un rato familiar y solamente quieres algo ligero?, no te preocupes más, 
+                    te invitamos a ver todos los apartados de nuestro sitio web, para saber más. 
+                </p>
+            </b>
+        </header>
+        <hr>
+
+        <!-- CLASES -->
+        <main class="contenedor seccion">
+            <h2>Nuestras Recomendaciones</h2>
+        <div class="contenedor-recipes">
+            <div class="Noticias">
+                <div class="recipe">
+                    <a href="templates/postres/carlota_limon.html"><img class="mov2" src="static/img/Postres/Carlota.jpg" alt=""></a>
+                    <div class="content">
+                        <p class="categoria">Postres</p>
+                        <a href="templates/postres/carlota_limon.html"><h3 class="color">Carlota de Limón</h3></a>
+                    </div>
+                </div>
+                <div class="recipe">
+                    <a href="templates/postres/flan_napolitano.html"><img img class="mov2" src="static/img/Postres/flan.jpg" alt=""></a>
+                    <div class="content">
+                        <p class="categoria">Postres</p>
+                        <a href="templates/postres/flan_napolitano.html"><h3 class="color">Flan Napolitano</h3></a>
+                    </div>
+                </div>
+                <div class="recipe ocultar">
+                    <a href="templates/comidas/espagueti_3quesos.html"><img img class="mov2" src="static/img/Comidas/ESPAGUETTI_A_LOS_TRES_QUESOS.jpg" alt=""></a>
+                    <div class="content">
+                        <p class="categoria">Pasta</p>
+                        <a href="templates/comidas/espagueti_3quesos.html"><h3 class="color">Espagueti a los 3 Quesos</h3></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Recomendación de cena -->
+        <section class=rec>
+            <div class="recomendacion">
+                <h2>Nuestras Románticas Recomendaciones.</h2>
+                <b>
+                    <p class="hidden">Invitaste a tú pareja a cenar esta noche y no sabes que cocinar, 
+                        no te preocupes, dentro de este apartado conoceras nuestras 5 mejores recomendaciones,
+                        para hacer de tu velada maravillosa.
+                    </p>
+                </b>
+                <a href="templates/cenas.html" class="btn">Ingresar </a>
+            </div>
+        </section>
+
+        <hr>
+        <br>
+
+            <h2>Postres</h2>
+        <div class="contenedor-recipes">
+            <div class="Noticias">
+                <div class="recipe">
+                    <a href="templates/postres/pastel_3_leches.html"><img img class="mov2" src="static/img/Postres/PASTEL_DE_TRES_LECHES.jpg" alt=""></a>
+                    <div class="content">
+                        <p class="categoria">Postres</p>
+                        <a href="templates/postres/pastel_3_leches.html"><h3 class="color">Pastel de Tres Leches</h3></a>
+                    </div>
+                </div>
+                <div class="recipe">
+                    <a href="templates/postres/arroz_con_leche.html"><img img class="mov2" src="static/img/Postres/arroz_con_leche.jpg" alt=""></a>
+                    <div class="content">
+                        <p class="categoria">Postres</p>
+                        <a href="templates/postres/arroz_con_leche.html"><h3 class="color">Arroz con Leche</h3></a>
+                    </div>
+                </div>
+                <div class="recipe ocultar">
+                    <a href="templates/postres/gelatina.html"><img img class="mov2" src="static/img/Postres/gelatina-de-mosaico.jpg" alt=""></a>
+                    <div class="content">
+                        <p class="categoria">Postres</p>
+                        <a href="templates/postres/gelatina.html"><h3 class="color">Gelatina de Mosaico</h3></a>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="center"> 
+                    <button class="btn"><a href="templates/postres.html">Ver Más</a></button>
+                </div>
+            </div>
+        </div>
+
+        </main>
+
+        <!-- RECOMENDACIONES (EN PROCESO)
+        <section class="Proximos-eventos">
+            <div class="coming-soon">
+                <h2>Tips para tú cocina</h2>
+                <b>
+                    <p class="hidden">Nos preocupamos por tí, por eso conoce nuestras recomendaciones, para tener
+                        tú cocina, limpia, ordenada, segura y que sea más agradable.
+                    </p>
+                </b>
+                <a href="#" class="btn">Ingresar <i class="fas fa-angle-double-right"></i></a>
+            </div>
+        </section>
+        --> 
+
+        <hr>
+        <br>
+        
+            <h2 text align = "center">Bebidas</h2>
+        <div class="contenedor-recipes">
+            <div class="Noticias">
+                <div class="recipe">
+                    <a href="templates/bebidas/agua_de_kiwi.html"><img img class="mov2" src="static/img/Bebidas/agua_de_kiwi.jpg" alt=""></a>
+                    <div class="content">
+                        <p class="categoria">Bebidas</p>
+                        <a href="templates/bebidas/agua_de_kiwi.html"><h3 class="color">Agua de Kiwi</h3></a>
+                    </div>
+                </div>
+                <div class="recipe">
+                    <a href="templates/bebidas/agua_de_horchata.html"><img img class="mov2" src="https://www.superama.com.mx/views/micrositio/recetas/images/ola-de-calor/aguadehorchata/Web_fotoreceta.jpg" alt="Agua de Horchata"></a>
+                    <div class="content">
+                        <p class="categoria">Bebidas</p>
+                        <a href="templates/bebidas/agua_de_horchata.html"><h3 class="color">Agua de Horchata</h3></a>
+                    </div>
+                </div>
+                <div class="recipe ocultar">
+                    <a href="templates/bebidas/agua_de_jamaica.html"><img img class="mov2" src="https://www.miaminews24.com/wp-content/uploads/2019/11/agua-de-jamaica-hibiscus-tea-photo-1024x768.jpg" alt="agua de Jamaica"></a>
+                    <div class="content">
+                        <p class="categoria">Bebidas</p>
+                        <a href="templates/bebida/sagua_de_jamaica.html"><h3 class="color">Agua de Jamaica</h3></a>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="center"> 
+                    <button class="btn"><a href="templates/bebidas.html">Ver Más</a></button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <section class="contactanos">
+            <p>Contáctanos</p>
+            <div class="links">
+                <a href="https://www.facebook.com/Fresh-cook-110639254015266/">
+                    <i class="fab fa-facebook-f"> Facebook</i>
+                </a>
+                <a href="https://www.instagram.com/fresh.cook20/">
+                    <i class="fab fa-instagram"> Instagram</i>
+                </a>
+                <a href="https://twitter.com/Freshcook3?s=08">
+                    <i class="fab fa-twitter"> Twitter</i>
+                </a>
+            </div>
+        </section>
+        <hr>
+        <h3>Fresh Cook &copy; 2020</h3>
+        <h3>Diseño Web: Cristopher Eduardo Ascencio Cruz & Emiliano Carrillo de la Cruz</h3>
+        <h3>Desarrollo: Cristopher Eduardo Ascencio Cruz</h3>
+    </footer>
+    <script src="static/js/script.js"></script>
+</body>
+</html>

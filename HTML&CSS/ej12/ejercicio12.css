@@ -1,0 +1,23 @@
+p{
+    background: gold;
+    border: 3px solid blue;
+    display: block;
+}
+/*
+    p{
+        display: inline-block;
+        background: gold;
+        border: 3px solid blue;
+        padding: 3px;
+    }
+/*
+p.none_dis{
+    display: none;
+}
+*/
+/*
+p.visi{
+    visibility: hidden;
+    background: yellow;
+}
+*/

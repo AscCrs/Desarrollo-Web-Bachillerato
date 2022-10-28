@@ -1,0 +1,64 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background: white;
+}
+header div img{
+    max-width: 1200px;
+    width: 100%;
+}
+header .main footer{
+    width: 90%;
+    max-width: 1200px;
+    margin: 15px, auto;
+}
+nav{
+    background: cyan;
+    overflow: auto;
+}
+header nav ul{
+    list-style: none;
+}
+header nav ul li{
+    float: left;
+    position: relative;
+}
+header nav ul li a {
+    padding: 8px 15px;
+    display: inline-block;
+    color: yellow;
+    text-decoration: none;
+}
+header nav ul li a:hover{
+    transition: all 0.3s;
+    background: black;
+    color: rgb(120,100,50);
+}
+.main .articles{
+    width: 70%;
+    margin-left: 3%;
+    float: left;
+    background: azure;
+}
+.main .articles article{
+    clear: both;
+    padding: 20px;
+    background: #0000;
+    margin-bottom: 20px;
+}
+footer{
+    clear: both;
+    float: left;
+    width: 100%;
+    background: #020289;
+    padding: 10px 0px;
+    color: #fff;
+}
+aside{
+    width: 27%;
+    float: left;
+    background: #7c9cc5;
+    color: #ffffff;
+}

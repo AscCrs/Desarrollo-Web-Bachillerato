@@ -1,0 +1,16 @@
+p {
+    color: green;
+    font-size: 8px;
+}
+#contenedor {
+    color: red;
+    background-color: black;
+}
+.clasep {
+    font-size: 150%;
+    background-color: orange;            
+}
+*{
+   margin: 5px; padding: 20px; 
+   overflow: auto;
+}

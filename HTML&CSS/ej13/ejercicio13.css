@@ -1,0 +1,39 @@
+.fondo{
+    width: 300px;
+    height: 1300px;
+    background: navy;
+    margin: 10px;
+}
+
+.fondoest{
+    width: 90px;
+    height: 90px;
+    background: red;
+    position: static;
+}
+
+.fondofixed{
+    width: 30px;
+    height: 30px;
+    background: white;
+    position: fixed;
+    margin: 20px;
+}
+
+.fondoabs{
+    width: 100px;
+    height: 100px;
+    background: pink;
+    position: absolute;
+    margin: 2px;
+    top: 15px;
+}
+
+.fondorelative{
+    width: 60px;
+    height: 60px;
+    background: olive;
+    position: relative;
+    top: -95px;
+    left: 80px;
+}
