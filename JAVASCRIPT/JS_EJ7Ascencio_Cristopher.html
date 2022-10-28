@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejercicio 7 - Concatenar elementos</title>
+    </head>
+    <body>
+        <div id="imprimirI"></div>
+        <div id="imprimirII"></div>
+    <script>
+        let escuela = 'CBTIS79', especialidad = 'Programación';
+        const seleccionI = document.querySelector('#imprimirI');
+        const seleccionII = document.querySelector('#imprimirII');
+
+        let lista1 = '<ul>' + '<li> Institución: ' + escuela + '</li>' + '<li> Especialidad: ' + especialidad + '</li>' + '</ul>';
+
+        let lista2 = `<ul> <li> institución: ${escuela} </li> <li>Especialidad: ${especialidad} </li> </ul>`;
+
+        seleccionI.innerHTML = lista1;
+        seleccionII.innerHTML = lista2;
+    </script>
+    </body>
+</html>

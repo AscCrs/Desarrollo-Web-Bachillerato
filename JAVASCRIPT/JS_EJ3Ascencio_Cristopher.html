@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejercicio 3 - Estructuras de control</title>
+        <script>
+            
+            function info(cadena) {
+                var resultado = "La cadena \""+ cadena +"\" ";
+                if (cadena == cadena.toUpperCase()) {
+                    resultado += " esta formada sólo por mayúsculas";
+                } else if(cadena == cadena.toLowerCase()){
+                    resultado += " esta formada sólo por minúsculas";
+                }
+                else {
+                    resultado += " esta formado por mayúsculas y minúsculas";
+                }
+                return resultado;
+            }
+
+            var cadena1 = prompt('Escribe la primer cadena');
+            alert(info(cadena1));
+
+            var cadena2 = prompt('Escribe la segunda cadena');
+            alert(info(cadena2));
+
+        </script>
+    </head>
+</html>

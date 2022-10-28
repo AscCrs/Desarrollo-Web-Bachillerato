@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejercicio 8 - Estructura Switch</title>
+    </head>
+    <body>
+        <script>
+
+            var num, bien, notanum, notacual;
+            num = parseInt(prompt("Escribe el número total de preguntas", ""));
+            bien = parseInt(prompt("Escribe el número de respuestas acertadas",""));
+            notanum = parseInt(10*bien/num);
+
+            switch (notanum) {
+                case 0:
+                    notacual = "Muy Deficiente";
+                    break;
+                
+                case 1:
+                    notacual = "Muy Deficiente";
+                    break;
+                    
+                case 2:
+                    notacual = "Deficiente";
+                    break;
+                    
+                case 3:
+                    notacual = "Deficiente";
+                    break;
+                    
+                case 4:
+                    notacual = "Insuficiente";
+                    break;
+                    
+                case 5:
+                    notacual = "Insuficiente";
+                    break;
+                    
+                case 6:
+                    notacual = "Bien";
+                    break;
+                    
+                case 7:
+                    notacual = "Bien";
+                    break;
+                    
+                case 8:
+                    notacual = "Notable";
+                    break;
+                    
+                case 9:
+                    notacual = "Excelente";
+                    break;
+                    
+                case 10:
+                    notacual = "Excepcional";
+                    break;
+
+                default:
+                    alert("Creo que esta equivocado");
+            }
+
+            alert("La nota Cualitativa es " + notacual);
+        </script>
+    </body>
+</html>

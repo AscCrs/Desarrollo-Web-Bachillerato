@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejercicio 10 - Función</title>
+    </head>
+    <body>
+        <script>
+            let nombre = prompt('Ingresa tu nombre');
+            let apellido = prompt('Ingresa tu apellido');
+            informacion(nombre, apellido);
+            function informacion(nombre,apellido) {
+                alert('Tu apellido es ' + apellido + ' Tu nombre es ' + nombre);
+            }
+
+            const resta = function(naci,año) {
+                alert(`Tu edad es: ${ año - naci }`)
+            }
+
+            let naci = prompt('Ingresa el año en que naciste');
+            var año = 2020;
+            resta(naci,año);
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,17 @@
+<html>
+    <meta charset="UTF-8">
+    <body>
+        <p>Presiona el boton para convertir la cadena a letras mayúsculas.</p>
+        <button onclick="mayus()">intentalo</button>    <!--El evento onclick se activa cuando presionas el boton, mandando a llamar la funcion mayus-->
+        <p id="impresion"></p>
+
+        <script>
+            function mayus() {  
+                var S = "Hola mundo!";  //Se declara una variable String con valor "Hola mundo!".
+                var res = S.toUpperCase();  //Se realiza la conversión del valor que guarda la variable S (Declarada anteriormente) y se guarda en res.
+
+                document.getElementById("impresion").innerHTML = res; //se le dice al script que retorne el valor de res, a la etiqueta declarada con la id "impresion".
+            }
+        </script>
+    </body>
+</html>

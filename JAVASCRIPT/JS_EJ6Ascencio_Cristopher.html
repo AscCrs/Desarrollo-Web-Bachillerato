@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejercicio 6 - Convertir Cadenas y Números</title>
+    </head>
+    <body>
+        <div id="imprimir"></div>
+
+        <script>
+            let numero1=50, numero2="10", concatenar, numero4=3.1416, valor, valor2, valor3;
+            valor = Number(numero2) + numero1;
+            valor2 = parseInt(numero2) + numero1;
+            valor3 = String(numero4);
+            concatenar = valor3.concat(' Cadena de texto');
+                document.getElementById('imprimir').innerHTML = ` <h2> Convertir de Cadena de 
+                    texto a número con Number</h2> <h3>${valor} </h3> <h2> Convertir de Cadena
+                    de texto a número con ParseInt</h2> <h3>${valor2} </h3> <h2> Convertir de 
+                    número a cadena de texto con String</h2> <h3>${concatenar} </h3>`;
+        </script>
+    </body>
+</html>

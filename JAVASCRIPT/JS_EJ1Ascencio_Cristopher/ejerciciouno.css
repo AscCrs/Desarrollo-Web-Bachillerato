@@ -1,0 +1,18 @@
+h1 {
+    color: green;
+    font-weight: normal;
+    font-size: 40px;
+    font-family: Arial;
+}
+h2 {
+    color: navy;
+    font-weight: normal;
+    font-size: 35px;
+    font-family: times;
+}
+h3 {
+    color: red;
+    font-weight: normal;
+    font-size: 50px;
+    font-family: serif;
+}

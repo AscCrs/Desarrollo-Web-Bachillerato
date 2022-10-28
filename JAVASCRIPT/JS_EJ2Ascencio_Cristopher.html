@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejercicio 2 - Estructuras de control</title>
+        <script type="text/javascript">
+            var numero1 = prompt("Introduce un número","");
+            var numero2 = prompt("Introduce el segundo número","");
+
+            if (numero1 >= 0) {
+                alert("numero1 es positivo");
+            }
+            if (numero2 >= 0) {
+                alert("numero2 es positivo");
+            }
+            if (numero1 != 0) {
+                alert("numero1 es distinto de 0");
+            }
+            if (++numero1 < numero2) {
+                alert("Incrementar en uno el valor de numero 1 no lo hace mayor o igual que numero 2");
+            }
+
+            var numero = prompt("Introduce un número entero","");
+            var resultado = parImpar(numero);
+            alert("El número " + numero + " es " + resultado);
+
+            function parImpar(numero) {
+                if (numero % 2 ==0) {
+                    return "par";
+                }
+                else {
+                    return "impar";
+                }
+            }
+        </script>
+    </head>
+</html>

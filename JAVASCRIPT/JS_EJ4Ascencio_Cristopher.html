@@ -1,0 +1,29 @@
+<html>
+<head>
+    <meta charset = "UTF-8">
+    <title>Ejercicio 4 - Estructuras de control</title>
+    <script>
+    	var n1, n2, n3;
+    	n1=parseFloat(prompt("Escribe el primer número ", ""));
+    	n2=parseFloat(prompt("Escribe el segundo número ", ""));
+    	n3=parseFloat(prompt("Escribe el tercer número ", ""));
+    	if(n1 <= n2 && n2 <= n3) {
+     		alert("El número menor, es el número " + n1);
+    	}
+     	else 
+     	{
+			if (n1 <= n3 && n3 <= n2) {
+				alert("El número menor, es el número " + n1);
+			}
+			else{
+				if (n2 < n3) {
+     				alert("El número menor, es el número " + n2);
+     			}
+     			else {
+     				alert("El número menor, es " + n3);
+     			}
+			}
+    	}
+    </script>
+</head>
+</html>

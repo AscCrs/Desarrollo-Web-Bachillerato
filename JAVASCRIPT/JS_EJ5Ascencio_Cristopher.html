@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejercicio 5 - Funciones para las cadenas de texto</title>
+    </head>
+    <body>
+        <div id="imprimir"></div>
+
+        <script>
+            var msj = "Funciones para las cadenas de texto de JavaScript";
+            var conteo = msj.length;
+            concatenar = msj.concat('Ejercicio 5');
+            repetidor = msj.repeat(2);
+            verificador = msj.includes("Javascript");
+            rempla = msj.replace('Javascript', 'JS');
+            separador = msj.split(" ");
+                document.getElementById('imprimir').innerHTML = ` <h2> Cadena de texto </h2> <h3>
+                ${msj} </h3> <h2> Función Length: </h2> <h3>${conteo} </h3> <h2> Función 
+                Concat </h2> <h3>${concatenar} </h3> <h2> Función Replace: </h2> <h3>${rempla} 
+                </h3> <h2> Función Split: </h2> <h3>${separador} </h3> <h2> Función Inlcudes 
+                </h2> <h3>${verificador} </h3> <h2> Función Repeat: </h2> <h3>${repetidor} 
+                </h3> `;
+        </script>
+    </body>
+</html>

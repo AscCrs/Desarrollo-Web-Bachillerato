@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejercicio 8 - Estructura Switch</title>
+    </head>
+    <body>
+        <script>
+
+            var opc="0";
+            var num;
+
+            while(opc != "10") 
+            {
+                opc=prompt("Escriba la opción que prefiera: (1)El triple-(2)El Cuadrado-(3)Logaritmo Natural-(4)El seno-(5)El Coseno-(10)SALIR") //Un logaritmo de un número natural positivo es el exponente al cual hay que elevar la base para obtener dicho número.
+            
+
+                switch (opc) {
+                    case "1":
+                        num = prompt("Escribe el número","");
+                        num = parseFloat(num);
+                        alert("El triple de " + num + " es " + (3*num));
+                        break;
+
+                    case "2":
+                        num = prompt("Escribe el número","");
+                        num = parseFloat(num);
+                        alert("El cuadrado de " + num + " es " + (num*num));
+                        break;    
+
+                    case "3":
+                        num = prompt("Escribe el número","");
+                        num = parseFloat(num);
+                        alert("El logaritmo de " + num + " es " + (Math.log(num)));
+                        break;
+                    
+                    case "4":
+                        num = prompt("Escribe el ángulo en radianes", "");
+                        num = parseFloat(num);
+                        alert("El seno de " + num + " es " + Math.sin(num));
+                        break;
+                
+                    case "5":
+                        num = prompt("Escribe el ángulo en radianes","");
+                        num = parseFloat(num);
+                        alert("El coseno de " + num + " es " + Math.cos(num));
+                        break;
+                }
+            }
+        </script>
+    </body>
+</html>
