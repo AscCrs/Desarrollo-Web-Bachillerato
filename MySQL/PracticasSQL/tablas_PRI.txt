@@ -1,0 +1,50 @@
+Cama_Paciente
+PK ID_Cama VARCHAR(50)
+num_cama VARCHAR(50)
+piso VARCHAR(5)
+seccion VARCHAR(50)
+
+Contacto_Emergencia
+PK nom_Contacto VARCHAR(120)
+edad_C VARCHAR(5)
+num_INE VARCHAR(50)
+parent VARCHAR(50)
+ocup_Cont VARCHAR(100)
+dir_Contacto VARCHAR(120)
+telContacto VARCHAR(20)
+
+Medicos
+PK cedula VARCHAR(50),
+nomMed VARCHAR(120),
+dirMedico VARCHAR(150),
+telMedico VARCHAR(20),
+RFC_Med VARCHAR(50),
+horario DATETIME,
+
+Visita_Medica
+PK clave_visit VARCHAR(50),
+fecha_V DATETIME,
+diagnost VARCHAR(200),
+sign_vit VARCHAR(100),
+observ VARCHAR(255),
+
+Paciente
+PK num_Seg VARCHAR(50),
+RFC_Pac VARCHAR(50),
+cp VARCHAR(10),
+nomComp VARCHAR(120),
+sexo VARCHAR(20),
+grupoSan VARCHAR(50),
+peso INT,
+telPaciente VARCHAR(20),
+diPaciente VARCHAR(100),
+ocupacionPac VARCHAR(120),
+estatura INT,
+fdh DATETIME,
+
+Historial_Clinico
+fecha_adm DATETIME,
+padecim VARCHAR(150),
+tratam VARCHAR(150),
+observ_gen VARCHAR(255),
+fecha_alt DATETIME,

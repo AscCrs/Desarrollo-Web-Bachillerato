@@ -1,0 +1,80 @@
+CREATE DATABASE practica3;
+USE practica3;
+
+CREATE TABLE direccion(
+Id_dir INT PRIMARY KEY,
+nom_calle VARCHAR(40),
+numero CHAR(15),
+CP INT,
+Colonia VARCHAR(25),
+Municipio VARCHAR(35),
+Estado VARCHAR(35),
+Referencias VARCHAR(40));
+
+CREATE TABLE categoria(
+Id_cat INT PRIMARY KEY,
+nom_cat VARCHAR(40),
+num_horas CHAR(15),
+salario DECIMAL(18,2));
+
+CREATE TABLE empleado(
+Cod_Empleado INT PRIMARY KEY,
+nombre VARCHAR(40),
+apellidos VARCHAR(50),
+RFC VARCHAR(25),
+Telefono CHAR(15),
+Email VARCHAR(25),
+id_dire INT,
+id_cat INT);
+
+CREATE TABLE grupo(
+Id_cat INT,
+Id_grupo CHAR(15) PRIMARY KEY,
+Turno VARCHAR(25));
+
+CREATE TABLE curso(
+cod_curso VARCHAR(20) PRIMARY KEY,
+nombre VARCHAR(40),
+Max_alumnos INT,
+Fecha_inicio date,
+Fecha_fin date,
+horas char(15),
+descripcion VARCHAR(55),
+id_grupo CHAR(15));
+
+CREATE TABLE inscribe(
+Id_insc INT PRIMARY KEY,
+Fecha datetime,
+pago DECIMAL(18,2),
+anotaciones VARCHAR(15),
+id_empleado INT,
+cod_curso VARCHAR(20));
+
+ALTER TABLE empleado ADD FOREIGN KEY(id_dire) REFERENCES direccion(Id_dir);
+
+ALTER TABLE empleado ADD FOREIGN KEY(id_cat) REFERENCES categoria(Id_cat);
+
+ALTER TABLE curso ADD FOREIGN KEY(id_grupo) REFERENCES grupo(Id_grupo);
+
+ALTER TABLE inscribe ADD FOREIGN KEY(id_empleado) REFERENCES empleado(Cod_empleado);
+
+ALTER TABLE inscribe ADD FOREIGN KEY(cod_curso) REFERENCES curso(Cod_curso);
+
+ALTER TABLE curso 
+CHANGE COLUMN Fecha_fin Fecha_termino date;
+
+ALTER TABLE curso MODIFY descripcion VARCHAR(100);
+
+INSERT INTO curso VALUES('A45-3','Habilidades socioemocionales',150,'2021-10-20','2021-11-30','40Hrs','Curso de habilidades sociemocionales aplicaciones de fichas',NULL);
+
+INSERT INTO curso VALUES('B59-4','Trabajo en equipo',120,'2021-03-10','2021-06-5','120Hrs','Curso de actividades recreativas asociadas con el trabajo en equipo',NULL);
+
+INSERT INTO curso VALUES('B57-6','Normas ISO',40,'2021-05-04','2021-07-30','80Hrs','Curso acerca de la Norma ISO 9001/Auditorias internas en la organización',NULL);
+
+INSERT INTO empleado VALUES(198930,'José','Mora Luna','MOLJ860204VC4','3335682435','Jose_m@gmail.com',NULL,NULL);
+
+INSERT INTO empleado VALUES(198931,'Dania','Mejia Khan','MEKD891105MC9','2235904488','dan_mk@gmail.com',NULL,NULL);
+
+INSERT INTO empleado VALUES(198932,'Arnold','Hernández Gómez','HEGA870716PP3','2298775100','Arn_hg@gmail.com',NULL,NULL);
+
+INSERT INTO empleado VALUES(198933,'Ignacio','Aguilar Jiménez','AGJI911024YY3','5537749002','nachito_aj@gmail.com',NULL,NULL);

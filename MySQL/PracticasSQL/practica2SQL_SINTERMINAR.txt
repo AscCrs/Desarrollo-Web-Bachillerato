@@ -1,0 +1,87 @@
+CREATE DATABASE practica2;
+USE practica2;
+
+CREATE TABLE ciudades(
+idCiudad INT PRIMARY KEY,
+Nombre VARCHAR(100));
+
+CREATE TABLE clientes(
+idCliente INT PRIMARY KEY,
+RFC VARCHAR(13),
+Saldo Decimal(18,2),
+Credito Decimal(18,2),
+Descuento INT);
+
+CREATE TABLE direcciones(
+idDireccion INT PRIMARY KEY,
+NumExterior VARCHAR(10),
+Calle VARCHAR(100),
+CP INT,
+Ciudad INT,
+IdCliente INT);
+
+CREATE TABLE pedidos(
+idPedido INT PRIMARY KEY,
+idCliente INT,
+Fecha Datetime,
+idDireccion INT);
+
+CREATE TABLE fabricas(
+IdFabrica INT PRIMARY KEY,
+Telefono CHAR(15));
+
+CREATE TABLE articulos(
+idArticulo INT PRIMARY KEY,
+Descripcion VARCHAR(100),
+Existencias INT,
+idFabrica INT);
+
+CREATE TABLE detalles(
+idPedido INT,
+idArticulo INT,
+Cantidad INT);
+
+ALTER TABLE direcciones ADD FOREIGN KEY(Ciudad) REFERENCES ciudades(idCiudad);
+
+ALTER TABLE direcciones ADD FOREIGN KEY(IdCliente) REFERENCES clientes(idCliente);
+
+ALTER TABLE pedidos ADD FOREIGN KEY(idDireccion) REFERENCES direcciones(idDireccion);
+
+ALTER TABLE articulos ADD FOREIGN KEY(idFabrica) REFERENCES fabricas(IdFabrica);
+
+ALTER TABLE detalles ADD FOREIGN KEY(idPedido) REFERENCES pedidos(idPedido);
+
+ALTER TABLE detalles ADD FOREIGN KEY(idArticulo) REFERENCES articulos(idArticulo);
+
+ALTER TABLE fabricas ADD Nombre VARCHAR(35) FIRST;
+
+ALTER TABLE clientes ADD Nombre VARCHAR(100) FIRST;
+
+ALTER TABLE clientes ADD fecha_Ingreso date;
+
+*INSERT INTO fabricas VALUES('HASSRT',1905,8885475300);
+					   2147483647*
+
+INSERT INTO fabricas VALUES('HASSRT',1905,8885475300);
+
+INSERT INTO ciudades VALUES(239,'Xalapa');
+
+INSERT INTO ciudades VALUES(240,'Boca del Río');
+
+INSERT INTO ciudades VALUES(242,'Veracruz');
+
+INSERT INTO ciudades VALUES(243,'Papantla');
+
+INSERT INTO fabricas VALUES('TRPM',8534,9949687490);
+
+INSERT INTO fabricas VALUES('Miclert',8544,4451653456);
+
+INSERT INTO clientes VALUES('Juan Campos Gil',3490,'CAGJ900302BT2', 300,00, 10000,00,10);
+
+INSERT INTO direcciones VALUES(109,'503','Ávila Camacho',91200,239,3490);
+
+INSERT INTO clientes VALUES('Soledad Machado Darner',3491,'MASD960209MN7', 500,00, 7000,00,10);
+
+INSERT INTO direcciones VALUES(110,'21','Gabriela Mistral',93400,243,3491);
+
+Update ciudades set Nombre ='Veracruz de Ignacio de la Llave' where IdCiudad=242

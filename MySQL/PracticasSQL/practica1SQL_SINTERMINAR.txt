@@ -1,0 +1,72 @@
+CREATE DATABASE Practica1;
+USE Practica1;
+
+CREATE TABLE sede(
+Id_sede INT PRIMARY KEY,
+Ciudad VARCHAR(40),
+pais VARCHAR(40),
+nom_sede VARCHAR(40));
+
+CREATE TABLE proyecto(
+Id_pro INT PRIMARY KEY,
+nombre VARCHAR(40),
+Fecha_inicio DATETIME,
+Fecha_termino DATETIME,
+Presupuesto DECIMAL(18, 2),
+Id_sede INT);
+
+ALTER TABLE proyecto ADD FOREIGN KEY(Id_sede)
+REFERENCES sede(Id_sede);
+
+insert into sede values(237, 'Kabul', 'Afganistán','hamid jaan');
+
+insert into sede values(238, 'Tirana', 'Albania','Barrio Bam');
+
+insert into sede values(239, 'Viena', 'Austria','Herrengasse');
+
+insert into sede values(240, 'Manama', 'Baréin','Muharraq');
+
+insert into sede values(241, 'La Habana', 'Cuba','El prado');
+
+insert into sede values(242, 'Liubliana', 'Eslovenia','Vilna');
+
+insert into sede values(243, 'Atenas', 'Grecia','Ermou');
+
+insert into sede values(244, 'Managua', 'Nicaragua','PRF');
+
+insert into sede values(245, 'Panamá', 'Panamá','Central-Cod');
+
+insert into sede values(246, 'Saná', 'Yemen','CAME');
+
+insert into proyecto values(8990, 'No más guerra', '2004-04-03','2008-04-03', 50000,237);
+insert into proyecto values(2655, 'Alas rotas', '2004-04-03','2008-04-03', 50000,238);
+insert into proyecto values(2886, 'Agua para todos', '2004-04-03','2008-04-03', 50000,246);
+insert into proyecto values(8863, 'Turismo amigable', '2000-05-04','2017-06-05', 10000, 237);
+insert into proyecto values(9864, 'Educación para todos', '2000-05-02','2017-06-05', 10000, 245);
+insert into proyecto values(7765, 'Salud para los niños', '2000-05-02','2017-06-05', 10000, 243);
+
+Update sede set nom_sede ='Soqatra' where
+Id_sede=246;
+
+Alter table proyecto add responsable
+varchar(45);
+
+Delete from sede where Id_sede=240;
+
+Update proyectos set responsable ='Amaal Azhar' where
+Id_pro=8990;
+
+Update proyectos set responsable ='Mohamed salah' where
+Id_pro=2655;
+
+Update proyectos set responsable ='Abdul Nahilia' where
+Id_pro=2886;
+
+Update proyectos set responsable ='Filoppo Rossi' where
+Id_pro=8863;
+
+Update proyectos set responsable ='Luciano Gruper' where
+Id_pro=9864;
+
+Update proyectos set responsable ='Chiara novak' where
+Id_pro=7765;

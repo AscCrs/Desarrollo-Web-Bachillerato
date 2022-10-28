@@ -1,0 +1,61 @@
+CREATE DATABASE practica4;
+USE practica4;
+
+CREATE TABLE autos(
+Id_auto INT PRIMARY KEY,
+Marca VARCHAR(20),
+Modelo VARCHAR(40),
+Precio decimal(18,2),
+Version VARCHAR(30),
+Color VARCHAR(20),
+Unidades INT);
+
+CREATE TABLE cliente(
+RFC INT PRIMARY KEY,
+Nombre VARCHAR(30),
+Apellidos VARCHAR(45),
+Fecha_compra datetime,
+Telefono VARCHAR(25),
+Correo_e VARCHAR(35));
+
+CREATE TABLE grupo(
+Id_grupo INT PRIMARY KEY,
+Nombre CHAR(10));
+
+CREATE TABLE cargo(
+Id_cargo INT PRIMARY KEY,
+Nombre_c CHAR(10),
+Sueldo decimal(18,2));
+
+CREATE TABLE vendedor(
+Id_vendedor INT PRIMARY KEY,
+Nombre VARCHAR(30),
+Apellidos VARCHAR(45),
+Fecha_alta datetime,
+Comision decimal(18,2),
+Id_grupo INT,
+Id_cargo INT);
+
+CREATE TABLE adquisicion_v(
+Id_adq INT,
+Fecha_com datetime,
+Cantidad INT,
+Descuento DECIMAL(18,2),
+Precio_neto DECIMAL(18,2),
+Id_auto INT,
+RFC_cliente INT,
+Id_vendedor INT);
+
+ALTER TABLE cliente MODIFY RFC VARCHAR(30);
+
+ALTER TABLE adquisicion_v MODIFY RFC_cliente VARCHAR(30);
+
+ALTER TABLE adquisicion_v ADD FOREIGN KEY(Id_auto) REFERENCES autos(Id_auto);
+
+ALTER TABLE adquisicion_v ADD FOREIGN KEY(RFC_cliente) REFERENCES cliente(RFC)
+
+ALTER TABLE adquisicion_v ADD FOREIGN KEY(Id_vendedor) REFERENCES vendedor(Id_vendedor);
+
+ALTER TABLE vendedor ADD FOREIGN KEY(Id_grupo) REFERENCES grupo(Id_grupo);
+
+ALTER TABLE vendedor ADD FOREIGN KEY(Id_cargo) REFERENCES cargo(Id_cargo);

@@ -1,0 +1,102 @@
+CREATE TABLE Clinica;
+SHOW DATABASES;
+USE Clinica
+
+CREATE TABLE Especialidad(
+codigo_Esp VARCHAR(50),
+nom_Esp VARCHAR(100),
+PRIMARY KEY(codigo_Esp));
+
+CREATE TABLE Cama_Paciente(
+ID_Cama VARCHAR(50),
+num_cama VARCHAR(50),
+piso VARCHAR(5),
+seccion VARCHAR(50),
+PRIMARY KEY(ID_Cama));
+
+CREATE TABLE Contacto_Emergencia(
+nom_Contacto VARCHAR(120),
+edad_C VARCHAR(5),
+num_INE VARCHAR(50),
+parent VARCHAR(50),
+ocup_Cont VARCHAR(100),
+dir_Contacto VARCHAR(120),
+telContacto VARCHAR(20),
+PRIMARY KEY(nom_Contacto));
+
+CREATE TABLE Medicos(
+cedula VARCHAR(50),
+nomMed VARCHAR(120),
+dirMedico VARCHAR(150),
+telMedico VARCHAR(20),
+RFC_Med VARCHAR(50),
+horario DATETIME,
+PRIMARY KEY(cedula));
+
+CREATE TABLE Visita_Medica(
+clave_visit VARCHAR(50),
+fecha_V DATETIME,
+diagnost VARCHAR(200),
+sign_vit VARCHAR(100),
+observ VARCHAR(255),
+PRIMARY KEY(clave_visit));
+
+CREATE TABLE Paciente(
+num_Seg VARCHAR(50),
+RFC_Pac VARCHAR(50),
+cp VARCHAR(10),
+nomComp VARCHAR(120),
+sexo VARCHAR(20),
+grupoSan VARCHAR(50),
+peso INT,
+telPaciente VARCHAR(20),
+diPaciente VARCHAR(100),
+ocupacionPac VARCHAR(120),
+estatura INT,
+fdh DATETIME,
+PRIMARY KEY(num_Seg));
+
+CREATE TABLE Historial_Clinico(
+fecha_adm DATETIME,
+padecim VARCHAR(150),
+tratam VARCHAR(150),
+observ_gen VARCHAR(255),
+fecha_alt DATETIME);
+
+SHOW TABLES;
+
+ALTER TABLE especialidad ADD FOREIGN KEY(cedula)
+REFERENCES medicos(cedula);
+
+ALTER TABLE visita_medica ADD FOREIGN KEY(num_Seg)
+REFERENCES paciente(num_Seg);
+
+ALTER TABLE visita_medica ADD FOREIGN KEY(cedula)
+REFERENCES medicos(cedula);
+
+ALTER TABLE historial_clinico ADD FOREIGN KEY(clave_visit)
+REFERENCES visita_medica(clave_visit);
+
+ALTER TABLE historial_clinico ADD FOREIGN KEY(ID_Cama)
+REFERENCES cama_paciente(ID_Cama);
+
+ALTER TABLE historial_clinico ADD FOREIGN KEY(nom_Contact)
+REFERENCES contacto_emergencia(nom_Contact)
+
+ALTER TABLE medicos MODIFY horario VARCHAR(15);
+
+INSERT INTO cama_paciente VALUES('183','50','3','Oncologia');
+
+INSERT INTO contacto_emergencia VALUES('Marta Cruz Mendoza','56','CRMNMR63071920M300','Madre','Vendedora de productos avon','Pedro de Alvarado Num 115. Colonia Revolución','22-92-35-08-57');
+
+INSERT INTO medicos VALUES('15683427','Lisset Contreras Velázquez','5 norte 803, Barrio San Isidro, San Mateo Tlaixpan','249-172-6923','LCV1820521','8:00-18:00');
+
+INSERT INTO paciente VALUES('72795608040',NULL,'94296','Cristopher Eduardo Ascencio Cruz','M','O+',50,'229-780-6951','Pedro de Alvarado Num 115. Colonia Revolución','Estudiante','172','2003-10-26');
+
+INSERT INTO especialidad VALUES('242','Oncologia Infantil','15683427');
+
+INSERT INTO visita_medica VALUES('35','2015-04-10','Carcinoma de células basales','Presión arterial: 90/60 mm Hg. Pulso: 80 latidos por minuto. Temperatura: 37.3°C',
+                                 'Bulto color piel, causado por el carcinoma, también se presentan llagas que llevan semanas sin sanar','72795608040','183');
+
+INSERT INTO historial_clinico VALUES('2015-05-15','Lesiones en la piel de color marron, Bultos color piel debajo de los ojos','Escisión quirúrgica','Bulto color piel, causado por el carcinoma, también se presentan llagas que llevan semanas 
+                                     sin sanar',NULL,'35','183','Marta Cruz Mendoza');
